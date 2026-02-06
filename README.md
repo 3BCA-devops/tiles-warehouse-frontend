@@ -24,6 +24,9 @@ Start backend Docker container before opening the frontend
 
 Frontend will fail to load data if backend is not running
 
+ppt link
+https://github.com/3BCA-devops/tiles-warehouse-frontend/blob/main/Tile-Warehouse-Management-System.pptx
+
 🛠️ Tech Stack
 
 React
