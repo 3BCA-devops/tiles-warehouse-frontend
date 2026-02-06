@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+🌐 Tile Warehouse – React Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the React frontend for the Tile Warehouse Management System.
+It provides the user interface for managing tiles and communicates with the Spring Boot backend via REST APIs.
 
-## Available Scripts
+🚀 Live Frontend URL (Vercel)
 
-In the project directory, you can run:
+👉 Frontend Application:
+https://tiles-warehouse-frontend.vercel.app/
 
-### `npm start`
+🔗 Backend Integration
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The frontend connects to a Spring Boot backend running locally using Docker.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+🌐 Backend URL (Local)
+http://localhost:8080
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+⚠️ Important Note
 
-### `npm run build`
+Backend must be running locally
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Start backend Docker container before opening the frontend
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Frontend will fail to load data if backend is not running
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+🛠️ Tech Stack
 
-### `npm run eject`
+React
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+JavaScript
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+HTML5
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+CSS3
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Axios (API Calls)
 
-## Learn More
+Vercel (Deployment)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+▶️ Run Frontend Locally
+🔹 Clone the repository
+git clone https://github.com/Thangam1110/tiles-warehouse-frontend.git
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+🔹 Go to project directory
+cd tiles-warehouse-frontend
 
-### Code Splitting
+🔹 Install dependencies
+npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+🔹 Start development server
+npm start
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Frontend runs at:
 
-### Making a Progressive Web App
+http://localhost:3000
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+⚙️ Environment Configuration
 
-### Advanced Configuration
+Create a .env file in the project root:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+REACT_APP_BACKEND_URL=http://localhost:8080
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Make sure the backend Docker container is running on port 8080.
 
-### `npm run build` fails to minify
+🐳 Backend (Required)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Run backend using Docker:
+
+docker build -t tilewarehouse .
+docker run -p 8080:8080 tilewarehouse
